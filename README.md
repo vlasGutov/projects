@@ -1,2 +1,2 @@
 # projects
-ai starter expirience
+My public projects repository.
