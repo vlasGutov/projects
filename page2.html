@@ -1,0 +1,50 @@
+<html>
+<head>
+<style>
+body {
+ color: white;
+ text-align: center;
+ font-size: 24px;
+ line-height: 3;
+}
+.gr_header { grid-area: header; background: orangered;}
+.gr_footer { grid-area: footer; background: deeppink;}
+.gr_main { grid-area: main; background: darkslateblue;}
+.gr_left { grid-area: left; background: dodgerblue}
+.gr_right { grid-area: right; background: forestgreen;}
+.gr {
+ display: grid;
+ grid-template-areas: "header header header"
+ "left main right"
+"footer footer footer";
+ grid-template-columns: 150px 1fr 150px;
+ grid-template-rows: 100px
+ 1fr
+ 100px;
+ min-height: 100vh;
+}
+@media screen and (max-width: 600px) {
+ .gr {
+ grid-template-areas: "header"
+ "left"
+"main"
+"right"
+ "footer";
+ grid-template-columns: 100%;
+ grid-template-rows: 100px
+ 50px
+1fr
+50px
+30px;
+ }
+}
+</style>
+</head>
+<body class="gr">
+ <header class="gr_header">HEADER</header>
+ <main class="gr_main">MAIN CONTENT</main>
+ <aside class="gr_left">LEFT SIDEBAR</aside>
+ <aside class="gr_right">RIGHT SIDEBAR</aside>
+ <footer class="gr_footer">FOOTER</footer>
+</body>
+</html>
